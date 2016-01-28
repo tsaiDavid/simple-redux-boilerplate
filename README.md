@@ -10,6 +10,10 @@ This is the perfect way to start any React + Redux application - **especially if
 
 My intention was to keep the overall style and structure as un-opinionated as possible, to offer you - the user - as much creativity and flexibility when it comes to your needs. Please feel free to explore the repo, I will continue to leave educational comments where I see fit, and suggestions and advice are always welcome. Of course, this is still a work in progress - so do let me know if you see things that might need a look at - or feel free to make a PR!
 
+This project features a super simple UI - just for you to see how everything is wired up, using the classic counter example:
+
+![](http://i.giphy.com/kVzC2nNRbFgC4.gif)
+
 I hope you find this helpful! If you like what you see please star/fork/follow me on **[GitHub](https://github.com/tsaiDavid/)** and be sure to follow me on **[Twitter](https://twitter.com/tftsai)**!
 
 ### Features
