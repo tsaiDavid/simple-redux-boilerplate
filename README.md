@@ -5,6 +5,8 @@ A simple, yet comprehensive React + Redux application, complete with DevTools.
 Author: [@tsaiDavid](https://github.com/tsaiDavid/) | [www.davidtsai.codes](https://www.davidtsai.codes)
 
 ### Overview
+  - `master` branch has basic features
+  - `react-router-redux` branch adds React-Router into the mix! (work-in-progress)
 
 This is the perfect way to start any React + Redux application - **especially if you're looking for a middle-ground**. The intention behind this boilerplate / starter-kit is to offer the user just the right amount of tools and code to hit the ground running, while minimizing bulk and overhead.
 
@@ -24,6 +26,7 @@ I hope you find this helpful! If you like what you see please star/fork/follow m
   - Express development server; easily roll out a production enabled server of your own
   - Eslint w/ basic configs
   - Redux DevTools + Logger middleware - easily removable/replaceable based on your needs
+  - Optional: *React-Router + bindings (checkout `react-router-redux` branch for more info)*
 
 ### Requirements
   - Recommend using `node ^5.0.0`
