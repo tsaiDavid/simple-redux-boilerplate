@@ -9,6 +9,11 @@ module.exports = class Root extends Component {
   render() {
     const { store } = this.props;
     return (
+      /**
+       * Provider is a component provided to us by the 'react-redux' bindings that
+       * wraps our app - thus making the Redux store/state available to our 'connect()'
+       * calls in component hierarchy below.
+       */
       <Provider store={store}>
         <App />
       </Provider>
