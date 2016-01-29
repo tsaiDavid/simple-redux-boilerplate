@@ -2,6 +2,8 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import rootReducer from '../reducers';
 import createLogger from 'redux-logger';
 import thunk from 'redux-thunk';
+import { browserHistory } from 'react-router'
+import { syncHistory } from 'react-router-redux'
 import DevTools from '../containers/DevTools';
 
 /**
@@ -12,12 +14,17 @@ import DevTools from '../containers/DevTools';
  */
 const logger = createLogger();
 
+const reduxRouterMiddleware = syncHistory(browserHistory);
+
 const finalCreateStore = compose(
   // Middleware you want to use in development:
-  applyMiddleware(logger, thunk),
+  applyMiddleware(logger, reduxRouterMiddleware, thunk),
   // Required! Enable Redux DevTools with the monitors you chose
   DevTools.instrument()
 )(createStore);
+
+// Required for replaying actions from devtools to work
+reduxRouterMiddleware.listenForReplays(store);
 
 module.exports = function configureStore(initialState) {
   const store = finalCreateStore(rootReducer, initialState);
