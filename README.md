@@ -25,6 +25,9 @@ I hope you find this helpful! If you like what you see please star/fork/follow m
   - Eslint w/ basic configs
   - Redux DevTools + Logger middleware - easily removable/replaceable based on your needs
 
+### Requirements
+  - Recommend using `node ^5.0.0`
+
 ### FAQ
 
   - Why another React and Redux boilerplate?
