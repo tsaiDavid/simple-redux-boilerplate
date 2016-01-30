@@ -4,32 +4,51 @@ A simple, yet comprehensive React + Redux application, complete with DevTools.
 
 Author: [@tsaiDavid](https://github.com/tsaiDavid/) | [www.davidtsai.codes](https://www.davidtsai.codes)
 
+***
+
 ### Overview
-  - `master` branch has basic features
-  - `react-router-redux` branch adds React-Router into the mix! (work-in-progress)
 
-This is the perfect way to start any React + Redux application - **especially if you're looking for a middle-ground**. The intention behind this boilerplate / starter-kit is to offer the user just the right amount of tools and code to hit the ground running, while minimizing bulk and overhead.
+*Available Branches:*
 
-My intention was to keep the overall style and structure as un-opinionated as possible, to offer you - the user - as much creativity and flexibility when it comes to your needs. Please feel free to explore the repo, I will continue to leave educational comments where I see fit, and suggestions and advice are always welcome. Of course, this is still a work in progress - so do let me know if you see things that might need a look at - or feel free to make a PR!
+*Checkout a branch to start with exactly what you need, explore others to learn how additional features might be implemented!*
+
+| Branch               | Description                             | Status                  |
+|----------------------|-----------------------------------------|-------------------------|
+| `master`             | Basic React, Redux, with DevTools.      | Complete, minus styles. |
+| `react-router-redux` | Adds 'react-router' and Redux bindings! | In Progress.            |
+
+This is the perfect way to start any React + Redux application - **especially if you're looking for a middle-ground**. Minimize bulk and overhead - and get the exact amount of tools and configuration necessary to hit the ground running!
+
+With educational comments and documentation sprinkled throughout this app, you'll learn and see how all the pieces come together - from Webpack and Babel all the way through React with Redux.
+
+Designed to keep style/structure as un-opinionated as possible,  to offer you - the user - as much creativity and flexibility when it comes to your needs. As this is stil a **work-in-progress**, do reach out if you have suggestions, fixes, etc! If you want to help, a basic Roadmap can be found below!
 
 This project features a super simple UI - just for you to see how everything is wired up, using the classic counter example:
 
 ![](http://i.giphy.com/kVzC2nNRbFgC4.gif)
 
-I hope you find this helpful! If you like what you see please star/fork/follow me on **[GitHub](https://github.com/tsaiDavid/)** and be sure to follow me on **[Twitter](https://twitter.com/tftsai)**!
+If you found this helpful, please star/fork/follow me on **[GitHub](https://github.com/tsaiDavid/)** and follow me on **[Twitter](https://twitter.com/tftsai)**! 
 
 ### Features
 
+##### Basic:
   - React + Redux
   - Babel 6 w/ basic presets and transform
   - Webpack w/ basic dev and prod configurations
   - Express development server; easily roll out a production enabled server of your own
   - Eslint w/ basic configs
   - Redux DevTools + Logger middleware - easily removable/replaceable based on your needs
-  - Optional: *React-Router + bindings (checkout `react-router-redux` branch for more info)*
+
+##### Optional:
+  - *React Router + bindings (checkout `react-router-redux` branch for more info)*
+
+***
 
 ### Requirements
-  - Recommend using `node ^5.0.0`
+  - `node 5.0.0` and higher!
+    - [*you can use a version manager like `n`*](https://github.com/tj/n)
+
+***
 
 ### FAQ
 
@@ -58,7 +77,8 @@ Ideally, fork this boilerplate, then clone.
 $ git clone https://github.com/YOUR_GITHUB_USERNAME_HERE/simple-redux-boilerplate.git
 ```
 
-Install required dependencies.
+Install required dependencies. 
+(*Did you make sure you have the right version of Node?*)
 ```
 npm install
 ```
@@ -73,6 +93,8 @@ You're now ready to get working! *(enter command or visit via browser directly)*
 open http://localhost:3000/
 ```
 
+***
+
 ##### Next Steps & Other Notes:
 
 Now that your development server is up and running, you will see that you have your Redux DevTools available for you to use. The keyboard shortcuts available follow the generally accepted config - but you're free to make changes to them here: `containers/DevTools.js`.
@@ -82,6 +104,8 @@ Now that your development server is up and running, you will see that you have y
 
 ***Change the DevTool panel's position during development:***
 <kbd>CTRL</kbd> + <kbd>Q</kbd>
+
+***
 
 ### Roadmap
 
@@ -95,12 +119,16 @@ Now that your development server is up and running, you will see that you have y
  - [ ] Add basic styles and enable webpack compilation of CSS/SASS
  - [ ] Provide additional documentation and example of pushing to production
 
+***
+
 ### Style Guide
 
 Code style can be a tricky subject - I've instead decided to rely on the ever trustworthy configurations that AirBnb follows!
 
 This project relies on `eslint-config-airbnb`.
 Learn more here: [AirBnb Style Guide](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb)
+
+***
 
 ### Credits
 
