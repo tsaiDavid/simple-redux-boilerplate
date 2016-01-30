@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import styles from './Counter.scss';
 
 export default class Counter extends Component {
   constructor(props, context) {
@@ -15,7 +16,7 @@ export default class Counter extends Component {
 
   render() {
     return (
-      <div className="counter-container">
+      <div className={styles.counterContainer}>
         <h3>Current Count: {this.props.counter}</h3>
         <br />
         {/* Below, the even or odd statement is simply used to demonstrate how one could
