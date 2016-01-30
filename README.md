@@ -16,7 +16,7 @@ Author: [@tsaiDavid](https://github.com/tsaiDavid/) | [www.davidtsai.codes](http
 
 | Branch               | Description                             | Status                  |
 |----------------------|-----------------------------------------|-------------------------|
-| `master`             | Basic React, Redux, with DevTools.      | Complete, minus styles. |
+| `master`             | Basic React, Redux, with DevTools.      | Complete, with SCSS now |
 | `react-router-redux` | Adds 'react-router' and Redux bindings! | In Progress!            |
 
 This is the perfect way to start any React + Redux application - **especially if you're looking for a middle-ground**. Minimize bulk and overhead - and get the exact amount of tools and configuration necessary to hit the ground running!
@@ -27,7 +27,7 @@ Designed to keep style/structure as un-opinionated as possible,  to offer you - 
 
 This project features a super simple UI - just for you to see how everything is wired up, using the classic counter example:
 
-![](http://i.giphy.com/kVzC2nNRbFgC4.gif)
+![](https://fat.gfycat.com/WarlikeFrightenedGraywolf.gif)
 
 If you found this helpful, please star/fork/follow me on **[GitHub](https://github.com/tsaiDavid/)** and follow me on **[Twitter](https://twitter.com/tftsai)**! 
 
