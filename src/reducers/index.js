@@ -21,7 +21,7 @@ import { routeReducer } from 'react-router-redux';
 
 const rootReducer = combineReducers({
   counter, // you might be used to: counter: counter,
-  routing: routeReducer // added a routeReducer
+  routing: routeReducer // adds current path to state
 });
 
 export default rootReducer;

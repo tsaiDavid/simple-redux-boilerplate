@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import { hashHistory } from 'react-router';
+import { browserHistory } from 'react-router';
 
 /**
  * Both configureStore and Root are required conditionally.
@@ -17,10 +17,10 @@ const store = configureStore();
 // https://travis-ci.org/rackt/react-router-redux/jobs/104947473
 
 // import { syncHistory } from 'react-router-redux';
-// const middleware = syncHistory(hashHistory);
+// const middleware = syncHistory(browserHistory);
 // middleware.listenForReplays(store);
 
 ReactDOM.render(
-  <Root store={store} history={hashHistory}/>,
+  <Root store={store} history={ browserHistory }/>,
   document.getElementById('root')
 );
