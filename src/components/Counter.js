@@ -3,7 +3,6 @@ import React, { Component, PropTypes } from 'react';
 export default class Counter extends Component {
   constructor(props, context) {
     super(props, context);
-    console.log(props);
   }
 
   handleIncrement() {
