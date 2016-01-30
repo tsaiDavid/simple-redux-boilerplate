@@ -1,7 +1,8 @@
 import React from 'react';
 import { Router, Route, IndexRoute } from 'react-router';
 import App from '../containers/App';
-import { Counter, Foo, Bar } from '../components';
+import { fourOhFour, Counter, Foo, Bar } from '../components';
+
 
 export default (props) => {
   /* history preserves browser history so things like the back button work */
@@ -17,6 +18,7 @@ export default (props) => {
         <Route path="foo" component={Foo}/>
         {/* Bar is rendered when path is /bar */}
         <Route path="bar" component={Bar}/>
+        <Route path='*' component={fourOhFour} />
       </Route>
     </Router>
   );
