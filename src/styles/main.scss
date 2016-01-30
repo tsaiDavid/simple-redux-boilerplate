@@ -1,0 +1,80 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:100,400);
+
+$main-bg-color: #f1f2f0;
+$accent-blue: #37bbe4;
+$accent-gray: #e1e0dd;
+$accent-black: #35342f;
+$accent-orange: #ec6b2d;
+$accent-red: #dd6464;
+
+body {
+  background-color: $main-bg-color;
+  color: $accent-black;
+  display: flex;
+  justify-content: center;
+  font-family: 'Raleway', sans-serif;
+}
+
+.main-app-container {
+  padding-top: 2em;
+}
+
+.main-app-nav {
+  font-size: 2em;
+  text-align: center;
+}
+
+.counter-num-label {
+  color: $accent-orange;
+  padding-top: 1em;
+  font-size: 3em;
+  text-align: center;
+  width: 100%;
+}
+
+.counter-even-label {
+  padding-top: 1em;
+  font-size: 0.75em;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.counter-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3em;
+
+  button {
+    background-color: #CCC;
+    border: none;
+    height: 30px;
+    width: 80px;
+    margin-left: 1em;
+    margin-right: 1em;
+
+    &:hover {
+      background-color: $accent-gray;
+    }
+  }
+}
+
+footer {
+  font-size: 0.75em;
+  text-align: center;
+  padding-top: 10em;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+      color: $accent-blue;
+    }
+  }
+
+  #heart{
+    color: $accent-red;
+  }
+}
