@@ -9,12 +9,6 @@ import { browserHistory } from 'react-router';
  */
 import { configureStore } from './store/configureStore';
 import { Root } from './containers/Root';
-/**
-  * Below we have imports that allow us to perform client side routing.
-  */
-import { Router, Route, browserHistory } from 'react-router'
-import { createHistory } from 'history';
-import routes from './routes';
 
 
 const store = configureStore();
