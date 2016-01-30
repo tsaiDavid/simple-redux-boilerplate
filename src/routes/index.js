@@ -1,18 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Route, IndexRoute, Redirect } from 'react-router';
-import { Root } from '../containers/Root';
-import { App } from '../containers/App';
-import NotFoundView from '../views/NotFoundView';
-
-export default (
-  <Route path='/' component={Root}>
-    <IndexRoute component={App} />
-    <Route path='/404' component={NotFoundView} />
-    <Redirect from='*' to='/404' />
-  </Route>
-)
-=======
 import { Router, Route, IndexRoute } from 'react-router';
 import App from '../containers/App';
 import { Counter, Foo, Bar } from '../components';
@@ -35,4 +21,3 @@ export default (props) => {
     </Router>
   );
 };
->>>>>>> redux-routing
