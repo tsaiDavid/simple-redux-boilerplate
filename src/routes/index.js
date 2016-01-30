@@ -10,7 +10,7 @@ export default (props) => {
   return (
     <Router history={history}>
       {/* App acts as a wraper for the child components*/}
-      <Route path='/' component={App}>
+      <Route path="/" component={App}>
         {/* IndexRoute is the initial component that is loaded*/}
         <IndexRoute component={Counter}/>
         {/* Foo is rendered when path is /foo */}

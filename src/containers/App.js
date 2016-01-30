@@ -1,7 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import Counter from '../components/Counter';
 import * as CounterActions from '../actions/CounterActions';
 import { Link } from 'react-router';
 
@@ -13,7 +12,7 @@ import { Link } from 'react-router';
 export default class App extends Component {
   render() {
     // we can use ES6's object destructuring to effectively 'unpack' our props
-    const { counter, actions, children} = this.props;
+    const { counter, actions, children } = this.props;
     return (
       <div>
         <header>
@@ -32,7 +31,7 @@ export default class App extends Component {
           {/* Nifty little trick to pass props into children */}
           {/* We can map over the children, clone the element, then pass props in */}
           {React.Children.map(children, (child) => {
-            return React.cloneElement(child, {counter, actions});
+            return React.cloneElement(child, { counter, actions });
           })}
         </div>
       </div>
@@ -42,7 +41,8 @@ export default class App extends Component {
 
 App.propTypes = {
   counter: PropTypes.number.isRequired,
-  actions: PropTypes.object.isRequired
+  actions: PropTypes.object.isRequired,
+  children: PropTypes.element.isRequired
 };
 
 /**
