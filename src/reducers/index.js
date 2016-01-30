@@ -20,7 +20,7 @@ import { routeReducer } from 'react-router-redux';
 
 const rootReducer = combineReducers({
   counter, // you might be used to: counter: counter,
-  routing: routeReducer // added a routeReducer
+  routing: routeReducer // add routeReducer as a prop on state
 });
 
 export default rootReducer;
