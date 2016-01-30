@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
-import App from './App';
+import Routes from '../routes';
 
 /**
  * Component is exported for conditional usage in Root.js
  */
 module.exports = class Root extends Component {
   render() {
-    const { store } = this.props;
+    const { store, history } = this.props;
     return (
       /**
        * Provider is a component provided to us by the 'react-redux' bindings that
@@ -15,7 +15,7 @@ module.exports = class Root extends Component {
        * calls in component hierarchy below.
        */
       <Provider store={store}>
-        <App />
+        <Routes history={history} />
       </Provider>
     );
   }
