@@ -2,8 +2,12 @@ import React, { Component, PropTypes } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as CounterActions from '../actions/CounterActions';
+<<<<<<< b07ca171980bfa934572822e0d684ee827cc098f
 import Counter from '../components/Counter';
 import Footer from '../components/Footer';
+=======
+import { Link } from 'react-router';
+>>>>>>> Added comments
 
 /**
  * It is common practice to have a 'Root' container/component require our main App (this one).
@@ -13,12 +17,28 @@ import Footer from '../components/Footer';
 export default class App extends Component {
   render() {
     // we can use ES6's object destructuring to effectively 'unpack' our props
-    const { counter, actions } = this.props;
+    const { counter, actions, children} = this.props;
     return (
       <div className="main-app-container">
+        <header>
+          Links:
+          {' '}
+          <Link to="/">Home</Link>
+          {' '}
+          <Link to="/foo">Foo</Link>
+          {' '}
+          <Link to="/bar">Bar</Link>
+        </header>
         <div className="main-app-nav">Simple Redux Boilerplate</div>
         {/* notice that we then pass those unpacked props into the Counter component */}
-        <Counter counter={counter} actions={actions} />
+        {/*<Counter counter={counter} actions={actions} />*/}
+        <div>
+          {/* Nifty little trick to pass props into children */}
+          {/* We can map over the children, clone the element, then pass props in */}
+          {React.Children.map(children, (child) => {
+            return React.cloneElement(child, {counter, actions});
+          })}
+        </div>
         <Footer />
       </div>
     );
