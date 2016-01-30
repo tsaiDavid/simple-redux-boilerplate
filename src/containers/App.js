@@ -19,7 +19,6 @@ export default class App extends Component {
       <div className="main-app-container">
         <div className="main-app-nav">Simple Redux Boilerplate</div>
           {/* notice that we then pass those unpacked props into the Counter component */}
-          {/*<Counter counter={counter} actions={actions} />*/}
           <header>
             Links:
             {' '}

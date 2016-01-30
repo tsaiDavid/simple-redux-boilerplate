@@ -3,6 +3,9 @@ import rootReducer from '../reducers';
 import createLogger from 'redux-logger';
 import thunk from 'redux-thunk';
 import DevTools from '../containers/DevTools';
+import { syncHistory } from 'react-router-redux';
+import { browserHistory } from 'react-router'
+const middleware = syncHistory(browserHistory);
 
 /**
  * Entirely optional, this tiny library adds some functionality to
@@ -14,7 +17,7 @@ const logger = createLogger();
 
 const finalCreateStore = compose(
   // Middleware you want to use in development:
-  applyMiddleware(logger, thunk),
+  applyMiddleware(logger, thunk, middleware),
   // Required! Enable Redux DevTools with the monitors you chose
   DevTools.instrument()
 )(createStore);
@@ -22,6 +25,7 @@ const finalCreateStore = compose(
 module.exports = function configureStore(initialState) {
   const store = finalCreateStore(rootReducer, initialState);
 
+  middleware.listenForReplays(store);
   // Hot reload reducers (requires Webpack or Browserify HMR to be enabled)
   if (module.hot) {
     module.hot.accept('../reducers', () =>
