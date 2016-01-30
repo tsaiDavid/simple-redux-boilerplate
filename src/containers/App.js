@@ -23,6 +23,8 @@ export default class App extends Component {
           <Link to="/foo">Foo</Link>
           {' '}
           <Link to="/bar">Bar</Link>
+          {' '}
+          <Link to="/wut-this-dun-exist">404</Link>
         </header>
         <div>
           <h1>Simple Redux Boilerplate</h1>
