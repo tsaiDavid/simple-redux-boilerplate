@@ -8,7 +8,7 @@ import Routes from '../routes';
  */
 module.exports = class Root extends Component {
   render() {
-    const { store, history } = this.props;
+    const { store } = this.props;
     return (
       /**
        * Provider is a component provided to us by the 'react-redux' bindings that
@@ -17,7 +17,7 @@ module.exports = class Root extends Component {
        */
       <Provider store={store}>
         <div>
-          <Routes history={history} />
+          <Routes />
           {/* Being the dev version of our Root component, we include DevTools below */}
           <DevTools />
         </div>

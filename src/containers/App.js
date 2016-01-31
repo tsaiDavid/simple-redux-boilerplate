@@ -3,6 +3,8 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as CounterActions from '../actions/CounterActions';
 import { Link } from 'react-router';
+import Counter from '../components/Counter';
+import Footer from '../components/Footer';
 
 /**
  * It is common practice to have a 'Root' container/component require our main App (this one).
@@ -12,30 +14,30 @@ import { Link } from 'react-router';
 export default class App extends Component {
   render() {
     // we can use ES6's object destructuring to effectively 'unpack' our props
-    const { counter, actions, children } = this.props;
+    const { counter, actions, children} = this.props;
     return (
-      <div>
-        <header>
-          Links:
-          {' '}
-          <Link to="/">Home</Link>
-          {' '}
-          <Link to="/foo">Foo</Link>
-          {' '}
-          <Link to="/bar">Bar</Link>
-          {' '}
-          <Link to="/wut-this-dun-exist">404</Link>
-        </header>
-        <div>
-          <h1>Simple Redux Boilerplate</h1>
-        </div>
-        <div>
-          {/* Nifty little trick to pass props into children */}
-          {/* We can map over the children, clone the element, then pass props in */}
-          {React.Children.map(children, (child) => {
-            return React.cloneElement(child, { counter, actions });
-          })}
-        </div>
+      <div className="main-app-container">
+        <div className="main-app-nav">Simple Redux Boilerplate</div>
+          {/* notice that we then pass those unpacked props into the Counter component */}
+          <header>
+            Links:
+            {' '}
+            <Link to="/">Home</Link>
+            {' '}
+            <Link to="/foo">Foo</Link>
+            {' '}
+            <Link to="/bar">Bar</Link>
+            {' '}
+            <Link to="/wut-this-dun-exist">404</Link>
+          </header>
+          <div>
+            {/* Nifty little trick to pass props into children */}
+            {/* We can map over the children, clone the element, then pass props in */}
+            {React.Children.map(children, (child) => {
+              return React.cloneElement(child, { counter, actions });
+            })}
+          </div>
+          <Footer />
       </div>
     );
   }
