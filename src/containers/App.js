@@ -3,7 +3,6 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as CounterActions from '../actions/CounterActions';
 import { Link } from 'react-router';
-import Counter from '../components/Counter';
 import Footer from '../components/Footer';
 
 /**
@@ -17,22 +16,18 @@ export default class App extends Component {
     const { counter, actions, children} = this.props;
     return (
       <div className="main-app-container">
-        <div className="main-app-nav">Simple Redux Boilerplate</div>
-          {/* notice that we then pass those unpacked props into the Counter component */}
-          <header>
-            Links:
-            {' '}
-            <Link to="/">Home</Link>
-            {' '}
-            <Link to="/foo">Foo</Link>
-            {' '}
-            <Link to="/bar">Bar</Link>
-            {' '}
-            <Link to="/wut-this-dun-exist">404</Link>
-          </header>
+        <div className="main-app-nav">
+          <div id="main-app-title">Simple Redux Boilerplate</div>
           <div>
-            {/* Nifty little trick to pass props into children */}
-            {/* We can map over the children, clone the element, then pass props in */}
+            <span><Link to="/">Home</Link></span>
+            <span><Link to="/foo">Foo</Link></span>
+            <span><Link to="/bar">Bar</Link></span>
+          </div>
+        </div>
+          <div>
+            {/* Here's a trick: we pass those props into the children by mapping
+              and cloning the element, followed by passing props in. Notice that
+              those props have been unpacked above! */}
             {React.Children.map(children, (child) => {
               return React.cloneElement(child, { counter, actions });
             })}
@@ -81,7 +76,6 @@ function mapDispatchToProps(dispatch) {
  *
  * More info: https://github.com/rackt/react-redux
  */
-
 export default connect(
   mapStateToProps,
   mapDispatchToProps

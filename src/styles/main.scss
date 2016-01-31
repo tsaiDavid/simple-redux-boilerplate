@@ -22,6 +22,14 @@ body {
 .main-app-nav {
   font-size: 2em;
   text-align: center;
+
+  a {
+    text-decoration: none;
+    color: $accent-blue;
+    font-size: 0.6em;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
 }
 
 .counter-num-label {
@@ -58,6 +66,12 @@ body {
       background-color: $accent-gray;
     }
   }
+}
+
+.view-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 footer {
