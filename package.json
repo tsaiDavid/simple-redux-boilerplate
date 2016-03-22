@@ -6,7 +6,7 @@
     "clean": "rimraf dist",
     "build:webpack": "cross-env NODE_ENV=production webpack --config webpack.config.prod.js",
     "build": "npm run clean && npm run build:webpack",
-    "dev": "NODE_ENV=development npm start",
+    "dev": "cross-env NODE_ENV=development npm start",
     "start": "node devServer.js",
     "lint": "eslint src"
   },
