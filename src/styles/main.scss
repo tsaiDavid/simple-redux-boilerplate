@@ -13,6 +13,7 @@ body {
   display: flex;
   justify-content: center;
   font-family: 'Raleway', sans-serif;
+  background: url(/static/images/githubEven0.jpg)
 }
 
 .main-app-container {
@@ -22,6 +23,15 @@ body {
 .main-app-nav {
   font-size: 2em;
   text-align: center;
+}
+
+.card-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.counter-container {
+  //height: 150px;
 }
 
 .counter-num-label {
@@ -53,6 +63,8 @@ body {
     width: 80px;
     margin-left: 1em;
     margin-right: 1em;
+    pointer-events: all;
+    cursor: pointer;
 
     &:hover {
       background-color: $accent-gray;

@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import * as CounterActions from '../actions/CounterActions';
 import Counter from '../components/Counter';
 import Footer from '../components/Footer';
+import Card from '../components/Card';
 
 /**
  * It is common practice to have a 'Root' container/component require our main App (this one).
@@ -11,6 +12,11 @@ import Footer from '../components/Footer';
  * component to make the Redux store available to the rest of the app.
  */
 export default class App extends Component {
+
+  constructor(){
+    super();
+  }
+
   render() {
     // we can use ES6's object destructuring to effectively 'unpack' our props
     const { counter, actions } = this.props;
@@ -18,6 +24,7 @@ export default class App extends Component {
       <div className="main-app-container">
         <div className="main-app-nav">Simple Redux Boilerplate</div>
         {/* notice that we then pass those unpacked props into the Counter component */}
+        <Card counter={counter} />
         <Counter counter={counter} actions={actions} />
         <Footer />
       </div>
