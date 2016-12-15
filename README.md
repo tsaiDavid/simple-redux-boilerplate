@@ -29,7 +29,7 @@ This project features a super simple UI - just for you to see how everything is 
 
 ![](https://fat.gfycat.com/WarlikeFrightenedGraywolf.gif)
 
-If you found this helpful, please star/fork/follow me on **[GitHub](https://github.com/tsaiDavid/)** and follow me on **[Twitter](https://twitter.com/tftsai)**! 
+If you found this helpful, please star/fork/follow me on **[GitHub](https://github.com/tsaiDavid/)** and follow me on **[Twitter](https://twitter.com/tftsai)**!
 
 ### Features
 
@@ -79,7 +79,7 @@ Ideally, fork this boilerplate, then clone.
 $ git clone https://github.com/YOUR_GITHUB_USERNAME_HERE/simple-redux-boilerplate.git
 ```
 
-Install required dependencies. 
+Install required dependencies.
 (*Did you make sure you have the right version of Node?*)
 ```
 npm install
@@ -90,10 +90,16 @@ Run development server, complete with DevTools and related configuration.
 npm run dev
 ```
 
-You're now ready to get working! *(enter command or visit via browser directly)*
+You're now ready to get working! *(enter command or visit via browser directly)*.
 ```
 open http://localhost:3000/
 ```
+
+If you wish not free your system 3000 port. Then just pass the port you wish
+```
+npm start --port=3003
+```
+open http://localhost:3003/
 
 ***
 
