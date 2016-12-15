@@ -95,11 +95,13 @@ You're now ready to get working! *(enter command or visit via browser directly)*
 open http://localhost:3000/
 ```
 
-If you wish not free your system 3000 port. Then just pass the port you wish
+If you wish not to free your system *3000* port. Then just pass the port of your wish/available.
 ```
 npm start --port=3003
 ```
+```
 open http://localhost:3003/
+```
 
 ***
 
