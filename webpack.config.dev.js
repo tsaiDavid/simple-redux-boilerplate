@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   devtool: 'cheap-module-eval-source-map',
@@ -10,8 +11,8 @@ module.exports = {
   ],
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: 'bundle.js',
-    publicPath: '/static/'
+    filename: '[name]-[hash].js',
+    publicPath: '/'
   },
   plugins: [
     /**
@@ -25,6 +26,17 @@ module.exports = {
      * the bail option.
      */
     new webpack.NoErrorsPlugin(),
+    /**
+     * This is a webpack plugin that simplifies creation of HTML files to serve your
+     * webpack bundles. This is especially useful for webpack bundles that
+     * include a hash in the filename which changes every compilation.
+     */
+    new HtmlWebpackPlugin({
+      template: 'index.html',
+      filename: 'index.html',
+      title: 'Simple Redux Boilerplate',
+      inject: 'body'
+    }),
     /**
      * DefinePlugin allows us to define free variables, in any webpack build, you can
      * use it to create separate builds with debug logging or adding global constants!
