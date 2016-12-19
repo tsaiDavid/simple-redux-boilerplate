@@ -1,11 +1,11 @@
-import { createStore, applyMiddleware, compose } from 'redux';
-import rootReducer from '../reducers';
-import thunk from 'redux-thunk';
+import { createStore, applyMiddleware } from 'redux'
+import thunk from 'redux-thunk'
+import rootReducer from '../reducers'
 
-const finalCreateStore = compose(
-  applyMiddleware(thunk)
-)(createStore);
+const middleware = [thunk]
 
-module.exports = function configureStore(initialState) {
-  return finalCreateStore(rootReducer, initialState);
-};
+export default createStore(
+  rootReducer,
+  applyMiddleware(...middleware)
+  // Other Redux store enhancers may go here
+)
