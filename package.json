@@ -8,6 +8,7 @@
     "build:webpack": "cross-env NODE_ENV=production webpack --config webpack.config.prod.js --progress --profile --colors",
     "build": "npm run clean && npm run build:webpack --progress --profile --colors",
     "dev": "NODE_ENV=development npm start",
+    "dev-win": "SET NODE_ENV=development && npm start", 
     "start": "node devServer.js",
     "lint": "eslint src"
   },
