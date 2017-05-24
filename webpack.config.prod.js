@@ -10,7 +10,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, 'dist'),
     filename: '[name]-[hash].js',
-    publicPath: '/'
+    publicPath: './'
   },
   plugins: [
     /**
@@ -18,7 +18,7 @@ module.exports = {
      * means is that frequently used IDs will get lower/shorter IDs - so they become
      * more predictable.
      */
-    new webpack.optimize.OccurenceOrderPlugin(),
+    new webpack.optimize.OccurrenceOrderPlugin(),
     /**
      * This is a webpack plugin that simplifies creation of HTML files to serve your
      * webpack bundles. This is especially useful for webpack bundles that
@@ -51,12 +51,12 @@ module.exports = {
     loaders: [
       {
         test: /\.js$/,
-        loaders: ['babel'],
+        loaders: ['babel-loader'],
         include: path.join(__dirname, 'src')
       },
       {
         test: /\.scss$/,
-        loader: 'style!css!sass'
+        loader: 'style-loader!css-loader!sass-loader'
       }
     ]
   }
