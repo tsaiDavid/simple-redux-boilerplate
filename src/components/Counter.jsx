@@ -1,9 +1,7 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 export default class Counter extends Component {
-  constructor(props, context) {
-    super(props, context);
-  }
 
   handleIncrement() {
     this.props.actions.increment();
@@ -23,8 +21,8 @@ export default class Counter extends Component {
         <div className="counter-even-label">{this.props.counter % 2 === 0 ? 'even' : 'odd'}</div>
         <br />
         <div className="counter-buttons">
-          <button onClick={() => {this.handleDecrement();}}>-</button>
-          <button onClick={() => {this.handleIncrement();}}>+</button>
+          <button onClick={() => { this.handleDecrement(); }}>-</button>
+          <button onClick={() => { this.handleIncrement(); }}>+</button>
         </div>
       </div>
     );

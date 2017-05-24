@@ -14,6 +14,9 @@ module.exports = {
     filename: '[name]-[hash].js',
     publicPath: '/'
   },
+  resolve: {
+    extensions: ['.js', '.jsx']
+  },
   plugins: [
     /**
      * This is where the magic happens! You need this to enable Hot Module Replacement!
@@ -25,7 +28,7 @@ module.exports = {
      * will not be emitted. If you want your webpack to 'fail', you need to check out
      * the bail option.
      */
-    new webpack.NoErrorsPlugin(),
+    new webpack.NoEmitOnErrorsPlugin(),
     /**
      * This is a webpack plugin that simplifies creation of HTML files to serve your
      * webpack bundles. This is especially useful for webpack bundles that
@@ -51,12 +54,12 @@ module.exports = {
       {
         test: /\.js?/,
         exclude: [/node_modules/, /styles/],
-        loaders: ['babel'],
+        loaders: ['babel-loader'],
         include: path.join(__dirname, 'src')
       },
       {
         test: /\.scss$/,
-        loader: 'style!css!sass'
+        loader: 'style-loader!css-loader!sass-loader'
       }
     ]
   }
