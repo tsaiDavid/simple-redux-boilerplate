@@ -7,7 +7,7 @@ module.exports = {
   entry: [
     'eventsource-polyfill', // necessary for hot reloading with IE
     'webpack-hot-middleware/client',
-    './src/index'
+    './src/index.jsx'
   ],
   output: {
     path: path.join(__dirname, 'dist'),
@@ -25,7 +25,8 @@ module.exports = {
      * will not be emitted. If you want your webpack to 'fail', you need to check out
      * the bail option.
      */
-    new webpack.NoErrorsPlugin(),
+//    new webpack.NoErrorsPlugin(),
+    new webpack.NoEmitOnErrorsPlugin(),
     /**
      * This is a webpack plugin that simplifies creation of HTML files to serve your
      * webpack bundles. This is especially useful for webpack bundles that
@@ -51,12 +52,12 @@ module.exports = {
       {
         test: /\.js?/,
         exclude: [/node_modules/, /styles/],
-        loaders: ['babel'],
+        loaders: ['babel-loader'],
         include: path.join(__dirname, 'src')
       },
       {
         test: /\.scss$/,
-        loader: 'style!css!sass'
+        loader: 'style-loader!css-loader!sass-loader'
       }
     ]
   }
