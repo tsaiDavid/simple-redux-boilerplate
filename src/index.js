@@ -11,7 +11,7 @@ import './styles/main.scss';
  * See configureStore.js and Root.js for more details.
  */
 import { configureStore } from './store/configureStore';
-import { Root } from './containers/Root';
+import Root from './containers/Root.jsx';
 
 const store = configureStore();
 

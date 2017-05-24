@@ -14,6 +14,9 @@ module.exports = {
     filename: '[name]-[hash].js',
     publicPath: '/'
   },
+  resolve: {
+    extensions: ['.js', '.jsx']
+  },
   plugins: [
     /**
      * This is where the magic happens! You need this to enable Hot Module Replacement!
