@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 const Footer = () => (
   <footer>
@@ -6,6 +6,6 @@ const Footer = () => (
     Made in SF with <span id="heart">♥</span> by <a href="http://www.davidtsai.codes">David Tsai</a>.
     </span>
   </footer>
-)
+);
 
 export default Footer;

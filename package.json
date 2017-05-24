@@ -9,7 +9,7 @@
     "build": "npm run clean && npm run build:webpack --progress --profile --colors",
     "dev": "NODE_ENV=development npm start",
     "start": "node devServer.js",
-    "lint": "eslint src"
+    "lint": "eslint --ext .js,.jsx src"
   },
   "repository": {
     "type": "git",

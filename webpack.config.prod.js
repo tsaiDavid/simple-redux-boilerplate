@@ -12,6 +12,9 @@ module.exports = {
     filename: '[name]-[hash].js',
     publicPath: './'
   },
+  resolve: {
+    extensions: ['.js', '.jsx']
+  },
   plugins: [
     /**
      * This plugin assigns the module and chunk ids by occurence count. What this
@@ -50,7 +53,7 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.js$/,
+        test: /\.js?/,
         loaders: ['babel-loader'],
         include: path.join(__dirname, 'src')
       },

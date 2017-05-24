@@ -28,7 +28,6 @@ module.exports = {
      * will not be emitted. If you want your webpack to 'fail', you need to check out
      * the bail option.
      */
-//    new webpack.NoErrorsPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
     /**
      * This is a webpack plugin that simplifies creation of HTML files to serve your
