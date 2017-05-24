@@ -1,8 +1,8 @@
 import { createStore, applyMiddleware, compose } from 'redux';
-import rootReducer from '../reducers';
-import createLogger from 'redux-logger';
+import { createLogger } from 'redux-logger';
 import thunk from 'redux-thunk';
 import DevTools from '../containers/DevTools';
+import rootReducer from '../reducers';
 
 /**
  * Entirely optional, this tiny library adds some functionality to
