@@ -50,6 +50,7 @@
     "react": "^0.14.3",
     "react-dom": "^0.14.3",
     "react-redux": "^4.1.1",
+    "redux": "^3.7.2",
     "redux-thunk": "^1.0.3"
   }
 }
