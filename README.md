@@ -128,6 +128,7 @@ Now that your development server is up and running, you will see that you have y
  - [ ] Clean up Redux actions, reducers, constants
  - [ ] Add basic styles and enable webpack compilation of CSS/SASS
  - [ ] Provide additional documentation and example of pushing to production
+ - [ ] Dynamic route loading chunks
 
 ***
 
